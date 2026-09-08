@@ -1,56 +1,384 @@
-body{
-    background;red !important;
-    font-family: Arial, sans-serif;
-    margin:0;
-    padding:0;
-    background:#f4f6f9;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header{
-    background:linear-gradient(135deg,#1e293b,#0f172a);
-    color:white;
-    text-align:center;
-    padding:40px;
+html {
+  scroll-behavior: smooth;
 }
 
-.profile-pic{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    object-fit:cover;
-    object-position:center top;
-    border:4px solid white;
-    display:block;
-    margin:0 auto 20px;
+body {
+  font-family: Arial, sans-serif;
+  background: #07111f;
+  color: #eef6ff;
+  line-height: 1.7;
 }
 
-section{
-    background:white;
-    margin:20px;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: rgba(7, 17, 31, 0.95);
+  border-bottom: 1px solid #1d3048;
 }
 
-h1{
-    margin-top:15px;
+.logo {
+  font-size: 28px;
+  font-weight: bold;
 }
 
-h2{
-    color:#2563eb;
+.logo span {
+  color: #55d6be;
 }
 
-.btn{
-    display:inline-block;
-    margin:10px;
-    padding:10px 20px;
-    background:#2563eb;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
+nav {
+  display: flex;
+  gap: 25px;
 }
 
-.btn:hover{
-    background:#1d4ed8;
+nav a {
+  color: #9fb0c3;
+  text-decoration: none;
+  font-weight: bold;
 }
 
+nav a:hover {
+  color: #55d6be;
+}
+
+.hero {
+  min-height: 90vh;
+  padding: 90px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-text {
+  max-width: 650px;
+}
+
+.small-title {
+  color: #55d6be;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 1.15;
+  margin-bottom: 25px;
+}
+
+h1 span,
+h2 span {
+  color: #55d6be;
+}
+
+.hero-text > p:not(.small-title) {
+  color: #9fb0c3;
+  font-size: 18px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 13px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.primary {
+  background: #55d6be;
+  color: #07111f;
+}
+
+.secondary {
+  border: 1px solid #55d6be;
+  color: #55d6be;
+}
+
+.social {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+  color: #9fb0c3;
+}
+
+.social a {
+  color: #9fb0c3;
+  text-decoration: none;
+}
+
+.social a:hover {
+  color: #55d6be;
+}
+
+.profile {
+  position: relative;
+  text-align: center;
+}
+
+.photo-box {
+  width: 300px;
+  height: 300px;
+  padding: 7px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #55d6be, #63a4ff);
+}
+
+.profile-pic,
+.photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  border: 5px solid #07111f;
+}
+
+.badge {
+  position: absolute;
+  right: -10px;
+  bottom: 20px;
+  background: #55d6be;
+  color: #07111f;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+section {
+  padding: 90px 8%;
+}
+
+section:nth-of-type(even) {
+  background: #091727;
+}
+
+h2 {
+  font-size: 42px;
+  margin-bottom: 35px;
+  line-height: 1.2;
+}
+
+.about-box {
+  max-width: 850px;
+  background: #0d1b2e;
+  border: 1px solid #1d3048;
+  border-radius: 15px;
+  padding: 30px;
+  color: #9fb0c3;
+}
+
+.about-box p + p {
+  margin-top: 15px;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: #0d1b2e;
+  border: 1px solid #1d3048;
+  border-radius: 15px;
+  padding: 25px;
+  min-height: 190px;
+}
+
+.card h3 {
+  color: #55d6be;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #9fb0c3;
+  font-size: 14px;
+}
+
+.soft {
+  margin-top: 35px;
+  color: #9fb0c3;
+}
+
+.soft h3 {
+  color: #eef6ff;
+  margin-bottom: 10px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.project {
+  background: #0d1b2e;
+  border: 1px solid #1d3048;
+  border-radius: 15px;
+  padding: 28px;
+  transition: 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  border-color: #55d6be;
+}
+
+.project small {
+  color: #55d6be;
+  font-weight: bold;
+}
+
+.project h3 {
+  font-size: 22px;
+  margin: 18px 0 12px;
+}
+
+.project p {
+  color: #9fb0c3;
+}
+
+.tags {
+  display: inline-block;
+  margin-top: 20px;
+  color: #55d6be;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.education {
+  max-width: 850px;
+  border-left: 2px solid #55d6be;
+}
+
+.education div {
+  padding: 0 0 35px 25px;
+}
+
+.education strong {
+  color: #55d6be;
+}
+
+.education h3 {
+  margin-top: 8px;
+}
+
+.education p {
+  color: #9fb0c3;
+}
+
+#contact > p:not(.small-title) {
+  color: #9fb0c3;
+  max-width: 700px;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.contact-links a {
+  padding: 11px 15px;
+  border: 1px solid #1d3048;
+  border-radius: 8px;
+  color: #9fb0c3;
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  color: #55d6be;
+  border-color: #55d6be;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #9fb0c3;
+  border-top: 1px solid #1d3048;
+  font-size: 13px;
+}
+
+@media (max-width: 850px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .buttons,
+  .social {
+    justify-content: center;
+  }
+
+  .skills {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 18px 5%;
+  }
+
+  nav {
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 11px;
+  }
+
+  .hero,
+  section {
+    padding: 65px 5%;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .photo-box {
+    width: 220px;
+    height: 220px;
+  }
+
+  .skills {
+    grid-template-columns: 1fr;
+  }
+
+  .badge {
+    right: -5px;
+  }
+}
